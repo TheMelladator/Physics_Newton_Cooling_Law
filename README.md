@@ -5,8 +5,6 @@
 
 A Python simulation of Newton's law of cooling, comparing theoretical model with experimental data (in progress). Includes interactive temperature plots and parameter analysis.
 
-![Example Plot](figures/cooling_curve.png)
-
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
@@ -52,19 +50,28 @@ r = 0.2
 
 ## Theory
 The differential equation modeled is:
+
+```markdown
 $$
 \frac{dT}{dt}=-r(T-T_{environment})
 $$
+```
+
 With analytical solution:
+
+```markdown
 $$
 T(t)=T_m+(T_0-T_m)e^{-rt}
 $$
+```
 
 ## Results
 ![Simulation Results](figures/newton_cooling.png)
 *Figure 1*: Temperature decay with `T0` = 300°, `Tm` = 21°C, `r` = 0.2 
 
 ## Project Structure
+
+```markdown
 /Physics_Newton_Cooling_Law/
 ├── src/
 │   └── Newton_cooling.ipynb  # Main simulation notebook
@@ -73,6 +80,7 @@ $$
 │   └── newton_cooling.png     
 ├── LICENSE
 └── README.md                 # This file
+```
 
 ## Next Steps
 - [] Add experimental data validation.
