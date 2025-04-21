@@ -11,7 +11,7 @@ A comprehensive Python project featuring both computational simulation and visua
 - Theoretical model visualization
 
 ## Featured Animation
-![Cooling Law Animation](media/videos/graph/Cooling_Law.mp4)
+![Cooling Law Animation](media/videos/graph/Cooling_Law.gif)
 
 ## Table of Contents
 - [Features](#features)
