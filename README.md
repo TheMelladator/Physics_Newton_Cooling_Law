@@ -57,8 +57,8 @@ jupyter notebook src/Newton_cooling.ipynb
 ```
 
 You'll be prompted to enter:
-- Ambient temperature (`Tm`) in Kelvin
-- Initial object temperature (`T0`) in Kelvin
+- Ambient temperature (`Tm`) in Kelvin or Celsius
+- Initial object temperature (`T0`) in Kelvin or Celsius
 - Cooling coefficient (`r`) in 1/second
     
 Example:
