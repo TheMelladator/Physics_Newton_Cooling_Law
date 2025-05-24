@@ -18,10 +18,24 @@ A comprehensive Python project featuring both computational simulation and visua
 - [Installation](#installation)
 - [Usage](#usage)
 - [Theory](#theory)
+- [Hardware Setup](#hardware-setup)
 - [Results](#results)
 - [Next Steps](#nextspteps)
 - [Project Structure](#project-structure)
 - [License](#license)
+
+### Features
+- **Computational Simulation**:
+  - Interactive temperature plots
+  - Parameter analysis with Jupyter Notebook
+  - Theoretical model visualization
+- **Experimental Setup**:
+  - Real-time data acquisition with ESP32 + DS18B20
+  - Circuit schematics and frimware
+  - Raw data comparison (experimental vs theoretical)
+- **Visualization**:
+ - Professional animations with Manim
+ - Comparative graphs (simulation/experimental)
 
 ### Simulation Module
 - Interactive Jupyter notebook
@@ -43,13 +57,21 @@ git clone https://github.com/TheMelladator/Physics_Newton_Cooling_Law.git
 cd Physics_Newton_Cooling_Law
 ```
 
-2. Install dependencies:
+2. For computational simulation:
    
 ```bash
 pip install numpy matplotlib jupyterlab manim
 ```
+3. For Experimental setup:
+   - Install Arduino IDE or PlatformIO.
+   - Add ESP32 board support (guide here).
+   - Install required libaries:
+     ```bash
+     arduino-cli lib install "OneWire" "DallasTemperaute"
+     ```
 
 ## Usage
+### Computational Simulation
 Run the simulation in Jupyter Notebook:
 
 ```bash
@@ -74,6 +96,8 @@ Run the animation in your favorite IDE
 manim -phd animation/grahp.py Cooling_Law
 ```
 
+
+
 ## Theory
 The differential equation modeled is:
 
@@ -96,7 +120,22 @@ The animation visualizes:
 - Tangent line at each point
 - Temperature decay process
 
+## Hardware Setup
+### Componentes
+- ESP32 (Wifi/Bluetooth MCU)
+- DS18B20 (Temperature sensor)
+- 4.7k\Omega (Pull-up for DS18B20)
+- Breadboard and jumper wires
 
+### Circuit Schematic
+![Circuit Diagram](experimental/schematics/circuit.png)
+*Figure 2*: Connection diagram for ESP32 and DS18B20.
+
+### Firmware
+- Code location: 'experimental/firmware/esp_cooling.ino'
+- Dependecies: 'OneWire' and 'DallasTemperature' libraries.
+- Data output: Serial monitor (CSV format)
+  
 ## Results
 ![Simulation Results](figures/newton_cooling.png)
 *Figure 1*: Temperature decay with `T0` = 300°, `Tm` = 21°C, `r` = 0.2 
